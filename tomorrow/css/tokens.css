@@ -1,0 +1,83 @@
+/* Tokens */
+@font-face {
+  font-family: 'TT Hoves Pro Trial';
+  src: url('../fonts/TT Hoves Pro Trial Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Mode 1 */
+  
+  /* Color: Background */
+  --background-brand-1: #f85438;
+  --background-brand-2: #7b583c;
+  --background-brand-3: #e2f27e;
+  --background-brand-4: #1a90df;
+  --background-brand-5: #0b6d3e;
+  --background-brand-6: #f2ebd9;
+  --background-primary: #000000;
+  --background-secondary: rgba(255, 255, 255, 0.05); /* #ffffff0d converted for readability */
+
+  /* Color: Icon */
+  --icon-brand-1: #f85438;
+  --icon-brand-2: #7b583c;
+  --icon-brand-3: #e2f27e;
+  --icon-brand-4: #1a90df;
+  --icon-brand-5: #0b6d3e;
+  --icon-brand-6: #f2ebd9;
+  --icon-primary: #ffffff;
+
+  /* Color: Stroke */
+  --stroke-primary: rgba(255, 255, 255, 0.12); /* #ffffff1f */
+
+  /* Color: Surfaces */
+  --surfaces-brand-1: #f85438;
+  --surfaces-brand-2: #7b583c;
+  --surfaces-brand-3: #e2f27e;
+  --surfaces-brand-4: #1a90df;
+  --surfaces-brand-5: #0b6d3e;
+  --surfaces-brand-6: #f2ebd9;
+  --surfaces-primary: #ffffff;
+  --surfaces-secondary: rgba(255, 255, 255, 0.05); /* #ffffff0d */
+
+  /* Color: Text */
+  --text-brand-1: #f85438;
+  --text-brand-2: #7b583c;
+  --text-brand-3: #e2f27e;
+  --text-brand-4: #1a90df;
+  --text-brand-5: #0b6d3e;
+  --text-brand-6: #f2ebd9;
+  --text-primary: #ffffff;
+  --text-primary-inverse: #000000;
+  --text-secondary: rgba(255, 255, 255, 0.32); /* #ffffff52 */
+
+  /* Radius */
+  --corners-m: 32px;
+  --corners-rounded: 999px;
+
+  /* Effects */
+  --background-blur-m: 200px;
+  /* blur-m from Styles: backdrop-filter: blur(200px) */
+  --blur-m: blur(200px);
+
+  /* Typography: Base Properties */
+  --font-family-primary: 'TT Hoves Pro Trial', sans-serif;
+  --font-weight-medium: 500;
+  --line-height-default: 1.2;
+  --letter-spacing-default: -0.03em;
+
+  /* Typography: Sizes (Base size: body-m = 18px) */
+  --font-size-title-l: 3.56rem; /* ~64px */
+  --font-size-title-m: 2.44rem; /* ~44px */
+  --font-size-body-l: 1.33rem;  /* ~24px */
+  --font-size-body-m: 1rem;     /* 18px */
+  
+  /* Typography: Composites (Utility variables for consistency) */
+  --title-l: var(--font-weight-medium) var(--font-size-title-l)/var(--line-height-default) var(--font-family-primary);
+  --title-m: var(--font-weight-medium) var(--font-size-title-m)/var(--line-height-default) var(--font-family-primary);
+  --body-l: var(--font-weight-medium) var(--font-size-body-l)/var(--line-height-default) var(--font-family-primary);
+  --body-m: var(--font-weight-medium) var(--font-size-body-m)/var(--line-height-default) var(--font-family-primary);
+}
+

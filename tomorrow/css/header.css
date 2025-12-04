@@ -1,0 +1,26 @@
+/* Header Component */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 12px 12px 20px;
+  gap: 51px;
+  width: 572px; /* Fixed width from Figma */
+  background-color: var(--surfaces-secondary);
+  border-radius: var(--corners-rounded);
+  backdrop-filter: var(--blur-m); /* 200px */
+  box-sizing: border-box;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  width: 146px;
+  height: 22px;
+}
+
+.header__action {
+  display: flex;
+}
+
