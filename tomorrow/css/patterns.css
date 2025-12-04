@@ -1,0 +1,47 @@
+/* Patterns Page Layout */
+
+.patterns-page {
+  padding-top: 240px; /* Matches Figma layout_CB4K7S top padding */
+  padding-bottom: 0; /* Removed bottom padding as requested */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.patterns-container {
+  width: 1440px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px; /* layout_5SG819 */
+  margin-bottom: 100px; /* Added bottom margin as requested */
+}
+
+.patterns-header-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* layout_BBF4E8 */
+}
+
+.patterns-back-btn-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* layout_5A0H3K */
+}
+
+.patterns-title {
+  font: var(--title-l);
+  color: var(--text-primary);
+}
+
+.patterns-grid {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 64px; /* Changed from generic gap: 20px */
+  column-gap: 20px; /* Kept column gap */
+  width: 100%;
+}
+
+/* Reuse footer style from main.css but ensure it fits here */
+/* Footer on this page is similar to Main but inside a frame layout_TWT9FI */
+

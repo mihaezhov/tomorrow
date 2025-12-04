@@ -1,0 +1,69 @@
+/* Footer Component */
+
+.footer {
+  display: flex;
+  flex-direction: column; /* Changed to column to allow inner container centering */
+  align-items: center;    /* Center the inner container */
+  width: 100%;
+  background-color: var(--background-primary);
+  border-top: 1px solid var(--stroke-primary);
+  box-sizing: border-box;
+  padding: 52px 0; /* Vertical padding only, horizontal handled by container */
+}
+
+.footer__inner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 1440px; /* Fixed width to match other page containers */
+  max-width: 100%; /* Responsiveness safety */
+  /* No padding needed if width matches 1440px layout exactly */
+}
+
+.footer__logo-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 300px; 
+}
+
+.footer__logo {
+  display: block;
+  width: 146px;
+  height: 22px;
+}
+
+.footer__logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer__tagline {
+  font: var(--body-m);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.footer__links-container {
+  display: flex;
+  gap: 80px;
+}
+
+.footer__links-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__link {
+  font: var(--body-m);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.footer__link:hover {
+  color: var(--text-brand-1);
+}

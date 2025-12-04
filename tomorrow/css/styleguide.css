@@ -1,0 +1,89 @@
+/* Styleguide Page Layout */
+
+.styleguide-page {
+  padding-top: 240px; /* Matches Figma layout_JITMKO padding-top */
+  padding-bottom: 120px; /* Matches Figma layout_JITMKO padding-bottom */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.styleguide-container {
+  width: 1440px; /* layout_8PLP4B */
+  display: flex;
+  flex-direction: column;
+  gap: 64px; /* layout_8PLP4B */
+}
+
+.styleguide-header-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* layout_KT7ZVE */
+}
+
+.styleguide-back-btn-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* layout_OA34EH */
+}
+
+.styleguide-title {
+  font: var(--title-l);
+  color: var(--text-primary);
+}
+
+/* Content Sections */
+.styleguide-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* layout_W2VKQB */
+  width: 100%;
+}
+
+.styleguide-section-title {
+  font: var(--body-l);
+  color: var(--text-primary);
+}
+
+.styleguide-image-container {
+  width: 100%;
+  border-radius: var(--corners-m); /* 32px */
+  overflow: hidden;
+  background-color: var(--background-primary); /* Default base, though Figma uses strokes/fills */
+}
+
+/* Specific Containers */
+.styleguide-logo-container {
+  height: 417px; /* layout_H40F1L */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--stroke-primary); /* stroke_J283JM */
+  border-radius: var(--corners-m);
+}
+
+.styleguide-colors-container {
+  height: 743px; /* layout_8E9YIU */
+  width: 100%;
+  border-radius: var(--corners-m);
+  overflow: hidden;
+}
+
+.styleguide-colors-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.styleguide-typography-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* layout_NDLKL0 */
+}
+
+.styleguide-typography-sample {
+  font: var(--title-m);
+  color: var(--text-primary);
+}
+

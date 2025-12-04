@@ -4,6 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tomorrow - Внедряйте ИИ</title>
+
+  <!-- Meta Tags -->
+  <meta name="description" content="Медиа о том, как искусственный интеллект меняет интерфейсы, CX и роль продуктовых дизайнеров.">
+  
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Tomorrow - Внедряйте ИИ">
+  <meta property="og:description" content="Медиа о том, как искусственный интеллект меняет интерфейсы, CX и роль продуктовых дизайнеров.">
+  <meta property="og:image" content="https://tomorrow.ai/img/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tomorrow.ai/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tomorrow - Внедряйте ИИ">
+  <meta name="twitter:description" content="Медиа о том, как искусственный интеллект меняет интерфейсы, CX и роль продуктовых дизайнеров.">
+  <meta name="twitter:image" content="https://tomorrow.ai/img/og-image.jpg">
   
   <!-- Design System -->
   <link rel="stylesheet" href="css/tokens.css">
@@ -15,6 +31,7 @@
   <link rel="stylesheet" href="css/inputs.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/footer.css">
   
   <!-- Page Styles -->
   <link rel="stylesheet" href="css/global.css">
@@ -25,7 +42,7 @@
   <!-- Sticky Header -->
   <div class="header-sticky-wrapper">
     <header class="header">
-        <a href="main.html" class="header__logo">
+      <a href="index.html" class="header__logo">
         <img src="img/logo.svg" alt="tomorrow" width="118" height="19">
       </a>
       <div class="header__action">
@@ -169,7 +186,7 @@
           </article>
         </div>
 
-        <div class="plus-cta" style="display:flex; justify-content:center;">
+        <div class="plus-cta">
           <button class="btn btn--primary">В лист ожидания</button>
         </div>
       </div>
@@ -178,7 +195,10 @@
     <!-- Footer CTA -->
     <section class="section-footer-cta">
       <div class="footer-bg">
-        <div style="width:100%; height:100%; background: #000;"></div> 
+        <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover;">
+          <source src="video/final.mp4" type="video/mp4">
+        </video>
+        <div style="position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.4);"></div> <!-- Optional overlay for readability -->
       </div>
       
       <div class="footer-content">
@@ -189,6 +209,29 @@
     </section>
 
   </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="footer__inner-container">
+      <div class="footer__logo-block">
+        <a href="index.html" class="footer__logo">
+          <img src="img/logo.svg" alt="tomorrow" width="118" height="19">
+        </a>
+        <p class="footer__tagline">Медиа о AI в диджитале</p>
+      </div>
+      
+      <div class="footer__links-container">
+        <div class="footer__links-column">
+          <a href="patterns.html" class="footer__link">Паттерны</a>
+          <a href="articles.html" class="footer__link">Статьи</a>
+          <a href="screens.html" class="footer__link">Скрины</a>
+        </div>
+        <div class="footer__links-column">
+          <a href="styleguide.html" class="footer__link">Гайдлайн</a>
+          <a href="https://t.me/tomorrow_ai" class="footer__link" target="_blank">Телеграм канал</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
-

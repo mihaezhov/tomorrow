@@ -329,8 +329,8 @@ body {
 }
 
 .plus-cta {
-  align-self: center;
-  margin-top: 0 !important; /* Override any inline style if present, though best to remove inline style in HTML too */
+  align-self: flex-start; /* Changed from center to flex-start */
+  margin-top: 0 !important; 
   padding-top: 0;
 }
 
@@ -376,5 +376,7 @@ body {
   font: var(--title-l);
   color: var(--text-primary);
   white-space: pre-line;
+  margin: 0;
+  padding: 0;
 }
 
