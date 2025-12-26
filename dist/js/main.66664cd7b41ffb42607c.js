@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("Tomorrow website loaded")})();
