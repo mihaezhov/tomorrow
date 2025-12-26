@@ -1,0 +1,47 @@
+.screens-page {
+  padding-top: 240px;
+  padding-bottom: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.screens-container {
+  width: 1440px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin-bottom: 120px;
+}
+
+.screens-header-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.screens-header-block .screens-back-btn-wrapper + .screens-title {
+  margin-top: -12px;
+}
+
+.screens-back-btn-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.screens-title {
+  font: var(--title-l);
+  color: var(--text-primary);
+}
+
+.screens-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.card--screen {
+}

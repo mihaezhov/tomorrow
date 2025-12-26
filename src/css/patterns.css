@@ -1,0 +1,45 @@
+.patterns-page {
+  padding-top: 240px;
+  padding-bottom: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.patterns-container {
+  width: 1440px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin-bottom: 100px;
+}
+
+.patterns-header-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.patterns-header-block .patterns-back-btn-wrapper + .patterns-title {
+  margin-top: -12px;
+}
+
+.patterns-back-btn-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.patterns-title {
+  font: var(--title-l);
+  color: var(--text-primary);
+}
+
+.patterns-grid {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 64px;
+  column-gap: 20px;
+  width: 100%;
+}

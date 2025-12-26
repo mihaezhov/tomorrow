@@ -1,0 +1,42 @@
+.tabbar {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+.tabbar__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: var(--corners-rounded);
+  font: var(--body-m);
+  letter-spacing: var(--letter-spacing-default);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.tabbar__item:hover {
+  background-color: var(--surfaces-secondary);
+}
+
+.tabbar__item--active {
+  color: var(--text-primary);
+}
+
+.tabbar--patterns .tabbar__item--active {
+  background-color: var(--surfaces-brand-1);
+}
+
+.tabbar--articles .tabbar__item--active {
+  background-color: var(--surfaces-brand-5);
+}
+
+.tabbar--screens .tabbar__item--active {
+  background-color: var(--surfaces-brand-4);
+}

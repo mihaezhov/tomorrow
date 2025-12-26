@@ -1,0 +1,89 @@
+
+
+.styleguide-page {
+  padding-top: 240px; 
+  padding-bottom: 120px; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.styleguide-container {
+  width: 1440px; 
+  display: flex;
+  flex-direction: column;
+  gap: 64px; 
+}
+
+.styleguide-header-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; 
+}
+
+.styleguide-back-btn-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px; 
+}
+
+.styleguide-title {
+  font: var(--title-l);
+  color: var(--text-primary);
+}
+
+
+.styleguide-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; 
+  width: 100%;
+}
+
+.styleguide-section-title {
+  font: var(--body-l);
+  color: var(--text-primary);
+}
+
+.styleguide-image-container {
+  width: 100%;
+  border-radius: var(--corners-m); 
+  overflow: hidden;
+  background-color: var(--background-primary); 
+}
+
+
+.styleguide-logo-container {
+  height: 417px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--stroke-primary); 
+  border-radius: var(--corners-m);
+}
+
+.styleguide-colors-container {
+  height: 743px; 
+  width: 100%;
+  border-radius: var(--corners-m);
+  overflow: hidden;
+}
+
+.styleguide-colors-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.styleguide-typography-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; 
+}
+
+.styleguide-typography-sample {
+  font: var(--title-m);
+  color: var(--text-primary);
+}
+

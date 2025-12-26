@@ -1,0 +1,23 @@
+
+
+
+.text-title-l {
+  font: var(--title-l);
+  color: var(--text-primary);
+}
+
+.text-title-m {
+  font: var(--title-m);
+  color: var(--text-primary);
+}
+
+.text-body-l {
+  font: var(--body-l);
+  color: var(--text-primary); 
+}
+
+.text-body-m {
+  font: var(--body-m);
+  color: var(--text-primary); 
+}
+
