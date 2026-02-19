@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production';
@@ -99,6 +100,11 @@ module.exports = (env, argv) => {
         filename: 'content/articles/article-1.html',
         chunks: ['main'],
       }),
+      new HtmlWebpackPlugin({
+        template: './src/quiz.html',
+        filename: 'quiz.html',
+        chunks: ['main'],
+      }),
       ...(isProduction
         ? [
             new MiniCssExtractPlugin({
@@ -106,6 +112,7 @@ module.exports = (env, argv) => {
             }),
           ]
         : []),
+      new Dotenv(),
       new CopyWebpackPlugin({
         patterns: [
           { from: 'src/favicon.svg', to: 'favicon.svg' },

@@ -14,5 +14,8 @@ import '../css/screens.css';
 import '../css/styleguide.css';
 import '../css/article-detail.css';
 import '../css/tabbar.css';
+import '../css/quiz.css';
+
+import './articles'
 
 console.log('Tomorrow website loaded');

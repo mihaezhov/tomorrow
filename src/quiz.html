@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tomorrow — Тест: готовность к AI</title>
+
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+
+  <meta name="description" content="5 вопросов — и вы узнаете, на каком этапе AI-трансформации находится ваш продукт или команда.">
+
+  <meta property="og:title" content="Tomorrow — Тест: готовность к AI">
+  <meta property="og:description" content="5 вопросов — и вы узнаете, на каком этапе AI-трансформации находится ваш продукт или команда.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mihaezhov.github.io/tomorrow/quiz.html">
+</head>
+<body>
+
+  <div class="header-sticky-wrapper">
+    <header class="header">
+      <a href="./index.html" class="header__logo">
+        <img src="./img/Logo.svg" alt="tomorrow" width="118" height="19">
+      </a>
+      <div class="header__action">
+        <button class="btn btn--secondary">
+          Медиа
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <main class="quiz-page">
+    <div class="quiz-container">
+
+      <div class="quiz-screen" id="quizIntro">
+        <div class="quiz-intro">
+          <span class="article-detail__tag">Тест</span>
+          <h1 class="quiz-intro__title">Готов ли ваш<br>продукт к AI?</h1>
+          <p class="quiz-intro__desc">5 вопросов — и вы узнаете, на каком этапе AI-трансформации находится ваш продукт или команда.</p>
+          <button class="btn btn--primary" id="startQuiz">Начать тест</button>
+        </div>
+      </div>
+
+      <div class="quiz-screen" id="quizQuestions" style="display:none;">
+        <div class="quiz-progress">
+          <div class="quiz-progress__bar">
+            <div class="quiz-progress__fill" id="progressFill"></div>
+          </div>
+          <span class="quiz-progress__counter" id="progressCounter">1 / 5</span>
+        </div>
+        <div id="questionsContainer"></div>
+        <button class="btn btn--primary quiz-next-btn" id="nextBtn" disabled>Далее</button>
+      </div>
+
+      <div class="quiz-screen" id="quizResult" style="display:none;">
+        <div class="quiz-result">
+          <span class="article-detail__tag">Результат</span>
+          <div class="quiz-result__score" id="resultScore"></div>
+          <div class="quiz-result__level" id="resultLevel"></div>
+          <p class="quiz-result__desc" id="resultDesc"></p>
+          <button class="btn btn--secondary quiz-restart-btn" id="restartQuiz">Пройти снова</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner-container">
+      <div class="footer__logo-block">
+        <a href="./index.html" class="footer__logo">
+          <img src="./img/Logo.svg" alt="tomorrow" width="118" height="19">
+        </a>
+        <p class="footer__tagline">Медиа о AI в диджитале</p>
+      </div>
+      <div class="footer__links-container">
+        <div class="footer__links-column">
+          <a href="./patterns.html" class="footer__link">Паттерны</a>
+          <a href="./articles.html" class="footer__link">Статьи</a>
+          <a href="./screens.html" class="footer__link">Скрины</a>
+        </div>
+        <div class="footer__links-column">
+          <a href="./styleguide.html" class="footer__link">Гайдлайн</a>
+          <a href="https://t.me/tomorrow_ai" class="footer__link" target="_blank">Телеграм канал</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const questions = [
+      {
+        title: 'Понимаете ли вы, где AI может улучшить ваш продукт?',
+        options: [
+          'Пока не задумывались об этом',
+          'Есть общее ощущение, но без конкретики',
+          'Определили несколько конкретных направлений',
+          'Есть чёткие приоритеты и обоснование'
+        ]
+      },
+      {
+        title: 'Как принимаются продуктовые решения в вашей команде?',
+        options: [
+          'На основе интуиции и опыта',
+          'Собираем обратную связь от пользователей',
+          'Используем данные для части решений',
+          'Большинство решений основаны на данных и метриках'
+        ]
+      },
+      {
+        title: 'Применяете ли AI-инструменты в рабочем процессе?',
+        options: [
+          'Нет, не пробовали',
+          'Слышали, но пока не внедряли',
+          'Попробовали несколько инструментов',
+          'Используем регулярно, встроили в процессы'
+        ]
+      },
+      {
+        title: 'Как ваша команда относится к неопределённости результатов AI?',
+        options: [
+          'Это вызывает серьёзные опасения',
+          'Обсуждаем, но пока не готовы',
+          'Принимаем как часть рабочего процесса',
+          'Это норма — мы встроили это в подход к продукту'
+        ]
+      },
+      {
+        title: 'Есть ли у вас план по внедрению AI в продукт?',
+        options: [
+          'Нет планов',
+          'Думаем об этом, но без конкретики',
+          'Есть черновик идей и направлений',
+          'Есть чёткая дорожная карта с этапами'
+        ]
+      }
+    ];
+
+    const levels = [
+      {
+        min: 0,
+        max: 30,
+        label: 'Наблюдатель',
+        desc: 'Вы только начинаете знакомиться с темой AI в продуктах. Это нормальная отправная точка — сейчас важно сформировать понимание возможностей и рисков, прежде чем двигаться дальше.'
+      },
+      {
+        min: 31,
+        max: 60,
+        label: 'Экспериментатор',
+        desc: 'Понимание есть, но системного подхода пока не хватает. Вы пробуете инструменты и собираете опыт — следующий шаг это выстроить процесс и выбрать конкретные точки внедрения.'
+      },
+      {
+        min: 61,
+        max: 85,
+        label: 'Практик',
+        desc: 'Вы движетесь в правильном направлении: есть опыт, понимание и планы. Осталось довести это до системного уровня — и ваш продукт получит реальное конкурентное преимущество.'
+      },
+      {
+        min: 86,
+        max: 100,
+        label: 'Пионер',
+        desc: 'Ваш продукт уже живёт в будущем. AI встроен в процессы, команда мыслит данными и готова к неопределённости. Теперь важно масштабировать подход и делиться опытом с рынком.'
+      }
+    ];
+
+    let currentQuestion = 0;
+    let answers = [];
+    const totalQuestions = questions.length;
+
+    const introEl = document.getElementById('quizIntro');
+    const questionsEl = document.getElementById('quizQuestions');
+    const resultEl = document.getElementById('quizResult');
+    const progressFill = document.getElementById('progressFill');
+    const progressCounter = document.getElementById('progressCounter');
+    const questionsContainer = document.getElementById('questionsContainer');
+    const nextBtn = document.getElementById('nextBtn');
+
+    function renderQuestion(index) {
+      const q = questions[index];
+      const isLast = index === totalQuestions - 1;
+
+      const pct = ((index) / totalQuestions) * 100;
+      progressFill.style.width = pct + '%';
+      progressCounter.textContent = (index + 1) + ' / ' + totalQuestions;
+      nextBtn.textContent = isLast ? 'Посмотреть результат' : 'Далее';
+      nextBtn.disabled = answers[index] === undefined;
+
+      questionsContainer.innerHTML = '';
+
+      const questionEl = document.createElement('div');
+      questionEl.className = 'quiz-question';
+
+      const titleEl = document.createElement('h2');
+      titleEl.className = 'quiz-question__title';
+      titleEl.textContent = q.title;
+      questionEl.appendChild(titleEl);
+
+      const optionsEl = document.createElement('div');
+      optionsEl.className = 'quiz-options';
+
+      q.options.forEach((optText, optIndex) => {
+        const option = document.createElement('div');
+        option.className = 'quiz-option' + (answers[index] === optIndex ? ' quiz-option--selected' : '');
+        option.dataset.value = optIndex;
+
+        const radio = document.createElement('div');
+        radio.className = 'quiz-option__radio';
+        const dot = document.createElement('div');
+        dot.className = 'quiz-option__radio-dot';
+        radio.appendChild(dot);
+
+        const text = document.createElement('span');
+        text.className = 'quiz-option__text';
+        text.textContent = optText;
+
+        option.appendChild(radio);
+        option.appendChild(text);
+
+        option.addEventListener('click', () => {
+          answers[index] = optIndex;
+          optionsEl.querySelectorAll('.quiz-option').forEach(el => el.classList.remove('quiz-option--selected'));
+          option.classList.add('quiz-option--selected');
+          nextBtn.disabled = false;
+        });
+
+        optionsEl.appendChild(option);
+      });
+
+      questionEl.appendChild(optionsEl);
+      questionsContainer.appendChild(questionEl);
+    }
+
+    function showResult() {
+      const total = answers.reduce((sum, val) => sum + val, 0);
+      const maxScore = 3 * totalQuestions;
+      const pct = Math.round((total / maxScore) * 100);
+
+      const level = levels.find(l => pct >= l.min && pct <= l.max) || levels[levels.length - 1];
+
+      progressFill.style.width = '100%';
+
+      questionsEl.style.display = 'none';
+      resultEl.style.display = 'flex';
+
+      document.getElementById('resultScore').textContent = pct + '%';
+      document.getElementById('resultLevel').textContent = level.label;
+      document.getElementById('resultDesc').textContent = level.desc;
+    }
+
+    document.getElementById('startQuiz').addEventListener('click', () => {
+      introEl.style.display = 'none';
+      questionsEl.style.display = 'flex';
+      currentQuestion = 0;
+      answers = [];
+      renderQuestion(currentQuestion);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (answers[currentQuestion] === undefined) return;
+      if (currentQuestion < totalQuestions - 1) {
+        currentQuestion++;
+        renderQuestion(currentQuestion);
+      } else {
+        showResult();
+      }
+    });
+
+    document.getElementById('restartQuiz').addEventListener('click', () => {
+      resultEl.style.display = 'none';
+      introEl.style.display = 'flex';
+      currentQuestion = 0;
+      answers = [];
+    });
+  </script>
+
+</body>
+</html>
