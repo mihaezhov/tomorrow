@@ -15,7 +15,7 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, 'dist'),
       filename: isProduction ? 'js/[name].[contenthash].js' : 'js/[name].js',
       clean: true,
-      publicPath: '/tomorrow/',
+      publicPath: isProduction ? '/tomorrow/' : '/',
     },
     module: {
       rules: [
@@ -106,8 +106,113 @@ module.exports = (env, argv) => {
         chunks: ['main'],
       }),
       new HtmlWebpackPlugin({
+        template: './src/content/articles/article-3.html',
+        filename: 'content/articles/article-3.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-4.html',
+        filename: 'content/articles/article-4.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-5.html',
+        filename: 'content/articles/article-5.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-6.html',
+        filename: 'content/articles/article-6.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-7.html',
+        filename: 'content/articles/article-7.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-8.html',
+        filename: 'content/articles/article-8.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-9.html',
+        filename: 'content/articles/article-9.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-10.html',
+        filename: 'content/articles/article-10.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-11.html',
+        filename: 'content/articles/article-11.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-12.html',
+        filename: 'content/articles/article-12.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-13.html',
+        filename: 'content/articles/article-13.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-14.html',
+        filename: 'content/articles/article-14.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-15.html',
+        filename: 'content/articles/article-15.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/screens/screen-1.html',
+        filename: 'content/screens/screen-1.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/patterns/pattern-1.html',
+        filename: 'content/patterns/pattern-1.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/patterns/pattern-2.html',
+        filename: 'content/patterns/pattern-2.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/patterns/pattern-3.html',
+        filename: 'content/patterns/pattern-3.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/patterns/pattern-4.html',
+        filename: 'content/patterns/pattern-4.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/patterns/pattern-5.html',
+        filename: 'content/patterns/pattern-5.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/patterns/pattern-6.html',
+        filename: 'content/patterns/pattern-6.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
         template: './src/quiz.html',
         filename: 'quiz.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/tests.html',
+        filename: 'tests.html',
         chunks: ['main'],
       }),
       ...(isProduction
@@ -132,7 +237,7 @@ module.exports = (env, argv) => {
       compress: true,
       port: 8080,
       hot: true,
-      open: true,
+      open: '/index.html',
       historyApiFallback: false,
     },
     optimization: {

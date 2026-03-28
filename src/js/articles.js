@@ -10,7 +10,7 @@ function getArticlesTeasers() {
   return new Promise((resolve, reject) => {
     const content = []
 
-    base('articles cards')
+    base('Table 1')
       .select()
       .eachPage(
         function page(records, fetchNextPage) {

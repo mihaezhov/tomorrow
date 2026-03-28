@@ -13,8 +13,11 @@ import '../css/articles.css';
 import '../css/screens.css';
 import '../css/styleguide.css';
 import '../css/article-detail.css';
+import '../css/pattern-detail.css';
+import '../css/screen-detail.css';
 import '../css/tabbar.css';
 import '../css/quiz.css';
+import '../css/tests.css';
 
 import './articles'
 

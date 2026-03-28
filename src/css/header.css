@@ -6,7 +6,7 @@
   align-items: center;
   padding: 12px 12px 12px 20px;
   gap: 51px;
-  width: 572px; 
+  width: 640px; 
   background-color: var(--surfaces-secondary);
   border-radius: var(--corners-rounded);
   backdrop-filter: var(--blur-m); 
@@ -22,5 +22,7 @@
 
 .header__action {
   display: flex;
+  align-items: center;
+  gap: 8px;
 }
 

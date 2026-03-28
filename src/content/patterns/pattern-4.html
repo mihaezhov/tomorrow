@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tomorrow - Генерация контента</title>
+
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+
+  <meta name="description" content="Паттерн генерации контента описывает, как ИИ создаёт ответ по запросу пользователя и как этот процесс должен быть представлен в интерфейсе.">
+
+  <meta property="og:title" content="Tomorrow - Генерация контента">
+  <meta property="og:description" content="Паттерн генерации контента описывает, как ИИ создаёт ответ по запросу пользователя и как этот процесс должен быть представлен в интерфейсе.">
+  <meta property="og:image" content="https://mihaezhov.github.io/tomorrow/img/MetaImage.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mihaezhov.github.io/tomorrow/content/patterns/pattern-4.html">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tomorrow - Генерация контента">
+  <meta name="twitter:description" content="Паттерн генерации контента описывает, как ИИ создаёт ответ по запросу пользователя и как этот процесс должен быть представлен в интерфейсе.">
+  <meta name="twitter:image" content="https://mihaezhov.github.io/tomorrow/img/MetaImage.png">
+</head>
+<body>
+
+  <div class="header-sticky-wrapper">
+    <header class="header">
+      <a href="../../index.html" class="header__logo">
+        <img src="../../img/Logo.svg" alt="tomorrow" width="118" height="19">
+      </a>
+      <div class="header__action">
+        <a href="../../tests.html" class="btn btn--secondary">
+          Тесты
+        </a>
+        <button class="btn btn--secondary">
+          Медиа
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <main class="pattern-detail-page">
+    <div class="pattern-detail-container">
+
+      <div class="pattern-detail__header">
+        <a href="../../patterns.html" class="btn btn--tertiary">
+          <span class="btn__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="rotate(180 12 12)"/>
+            </svg>
+          </span>
+          Назад
+        </a>
+
+        <div class="pattern-detail__preview">
+          <img src="../../img/p04.png" alt="Генерация контента — пример паттерна">
+        </div>
+
+        <div class="pattern-detail__meta">
+          <h1 class="article-detail__title">Генерация контента</h1>
+          <p class="pattern-detail__description">Создание ответа по запросу юзера</p>
+          <span class="article-detail__tag">Паттерн</span>
+        </div>
+      </div>
+
+      <article class="article-detail__content">
+        <h2>Что это</h2>
+        <p>Генерация контента — это процесс создания ИИ текстового, визуального или структурированного ответа на запрос пользователя. С точки зрения интерфейса, это не просто результат — это целый сценарий: ожидание, появление контента, возможность его оценить и отредактировать.</p>
+
+        <h2>Когда использовать</h2>
+        <div class="pattern-checklist">
+          <div class="pattern-checklist__item pattern-checklist__item--check">
+            <div class="pattern-checklist__icon">
+              <img src="../../img/check-icon.svg" alt="check">
+            </div>
+            <p class="pattern-checklist__text">Создание текстов: письма, посты, описания, резюме.</p>
+          </div>
+          <div class="pattern-checklist__item pattern-checklist__item--check">
+            <div class="pattern-checklist__icon">
+              <img src="../../img/check-icon.svg" alt="check">
+            </div>
+            <p class="pattern-checklist__text">Генерация структурированного контента: планы, таблицы, списки задач.</p>
+          </div>
+          <div class="pattern-checklist__item pattern-checklist__item--check">
+            <div class="pattern-checklist__icon">
+              <img src="../../img/check-icon.svg" alt="check">
+            </div>
+            <p class="pattern-checklist__text">Трансформация контента: перефразирование, перевод, сокращение.</p>
+          </div>
+          <div class="pattern-checklist__item pattern-checklist__item--check">
+            <div class="pattern-checklist__icon">
+              <img src="../../img/check-icon.svg" alt="check">
+            </div>
+            <p class="pattern-checklist__text">Творческие задачи: идеи, варианты, черновики.</p>
+          </div>
+        </div>
+
+        <h2>Как работает</h2>
+        <p>Пользователь формулирует запрос — система начинает генерацию. Важно показать процесс: анимация загрузки или стриминг текста создают ощущение живого ответа. После завершения пользователь видит результат целиком и может его скопировать, отредактировать или запросить новый вариант.</p>
+
+        <p>Кнопки действий с результатом — копировать, регенерировать, дать обратную связь — размещаются рядом с ответом и не мешают его восприятию.</p>
+
+        <div class="pattern-screens">
+          <div class="pattern-screens__phone">
+            <img src="../../img/screen-16.png" alt="Пример экрана 1">
+          </div>
+          <div class="pattern-screens__phone">
+            <img src="../../img/screen-17.png" alt="Пример экрана 2">
+          </div>
+          <div class="pattern-screens__phone">
+            <img src="../../img/screen-18.png" alt="Пример экрана 3">
+          </div>
+        </div>
+
+        <h2>Чего избегать</h2>
+        <div class="pattern-checklist">
+          <div class="pattern-checklist__item pattern-checklist__item--cross">
+            <div class="pattern-checklist__icon">
+              <img src="../../img/charm_cross.svg" alt="cross">
+            </div>
+            <p class="pattern-checklist__text">Долгое ожидание без индикации прогресса — пользователь не знает, работает ли система.</p>
+          </div>
+          <div class="pattern-checklist__item pattern-checklist__item--cross">
+            <div class="pattern-checklist__icon">
+              <img src="../../img/charm_cross.svg" alt="cross">
+            </div>
+            <p class="pattern-checklist__text">Невозможность остановить генерацию — особенно при длинных ответах.</p>
+          </div>
+          <div class="pattern-checklist__item pattern-checklist__item--cross">
+            <div class="pattern-checklist__icon">
+              <img src="../../img/charm_cross.svg" alt="cross">
+            </div>
+            <p class="pattern-checklist__text">Отсутствие возможности попросить другой вариант без полного перезапуска.</p>
+          </div>
+          <div class="pattern-checklist__item pattern-checklist__item--cross">
+            <div class="pattern-checklist__icon">
+              <img src="../../img/charm_cross.svg" alt="cross">
+            </div>
+            <p class="pattern-checklist__text">Результат без каких-либо действий рядом — пользователь не знает, что делать дальше.</p>
+          </div>
+        </div>
+      </article>
+
+      <section class="pattern-detail__related">
+        <h2 class="article-detail__related-title">Другие паттерны</h2>
+
+        <div class="pattern-detail__related-grid">
+          <a href="pattern-1.html" class="pattern-detail__related-card">
+            <div class="pattern-detail__related-card-image">
+              <img src="../../img/p01.png" alt="Саджесты">
+            </div>
+            <div>
+              <h3 class="pattern-detail__related-card-title">Саджесты</h3>
+              <p class="pattern-detail__related-card-subtitle">Подсказывают, что можно сделать дальше</p>
+            </div>
+          </a>
+
+          <a href="pattern-2.html" class="pattern-detail__related-card">
+            <div class="pattern-detail__related-card-image">
+              <img src="../../img/p02.png" alt="Инпут и ввод данных">
+            </div>
+            <div>
+              <h3 class="pattern-detail__related-card-title">Инпут и ввод данных</h3>
+              <p class="pattern-detail__related-card-subtitle">Удобный и контролируемый ввод запроса</p>
+            </div>
+          </a>
+
+          <a href="pattern-5.html" class="pattern-detail__related-card">
+            <div class="pattern-detail__related-card-image">
+              <img src="../../img/p05.png" alt="Навигация">
+            </div>
+            <div>
+              <h3 class="pattern-detail__related-card-title">Навигация</h3>
+              <p class="pattern-detail__related-card-subtitle">Перемещение внутри сценария</p>
+            </div>
+          </a>
+
+          <a href="pattern-6.html" class="pattern-detail__related-card">
+            <div class="pattern-detail__related-card-image">
+              <img src="../../img/p06.png" alt="Проактивные элементы">
+            </div>
+            <div>
+              <h3 class="pattern-detail__related-card-title">Проактивные элементы</h3>
+              <p class="pattern-detail__related-card-subtitle">Действия ИИ без прямого запроса</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner-container">
+      <div class="footer__logo-block">
+        <a href="../../index.html" class="footer__logo">
+          <img src="../../img/Logo.svg" alt="tomorrow" width="118" height="19">
+        </a>
+        <p class="footer__tagline">Медиа о AI в диджитале</p>
+      </div>
+
+      <div class="footer__links-container">
+        <div class="footer__links-column">
+          <a href="../../patterns.html" class="footer__link">Паттерны</a>
+          <a href="../../articles.html" class="footer__link">Статьи</a>
+          <a href="../../screens.html" class="footer__link">Скрины</a>
+        </div>
+        <div class="footer__links-column">
+          <a href="../../styleguide.html" class="footer__link">Гайдлайн</a>
+          <a href="https://t.me/tomorrow_ai" class="footer__link" target="_blank">Телеграм канал</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

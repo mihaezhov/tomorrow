@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tomorrow - Саджесты</title>
+  <title>Tomorrow - Навигация</title>
 
   <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 
-  <meta name="description" content="Саджесты подсказывают пользователю, что можно сделать дальше, снижая когнитивную нагрузку и ускоряя взаимодействие с ИИ-продуктом.">
+  <meta name="description" content="Паттерн навигации описывает, как пользователь перемещается внутри сценария взаимодействия с ИИ-продуктом.">
 
-  <meta property="og:title" content="Tomorrow - Саджесты">
-  <meta property="og:description" content="Саджесты подсказывают пользователю, что можно сделать дальше, снижая когнитивную нагрузку и ускоряя взаимодействие с ИИ-продуктом.">
+  <meta property="og:title" content="Tomorrow - Навигация">
+  <meta property="og:description" content="Паттерн навигации описывает, как пользователь перемещается внутри сценария взаимодействия с ИИ-продуктом.">
   <meta property="og:image" content="https://mihaezhov.github.io/tomorrow/img/MetaImage.png">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://mihaezhov.github.io/tomorrow/content/patterns/pattern-1.html">
+  <meta property="og:url" content="https://mihaezhov.github.io/tomorrow/content/patterns/pattern-5.html">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tomorrow - Саджесты">
-  <meta name="twitter:description" content="Саджесты подсказывают пользователю, что можно сделать дальше, снижая когнитивную нагрузку и ускоряя взаимодействие с ИИ-продуктом.">
+  <meta name="twitter:title" content="Tomorrow - Навигация">
+  <meta name="twitter:description" content="Паттерн навигации описывает, как пользователь перемещается внутри сценария взаимодействия с ИИ-продуктом.">
   <meta name="twitter:image" content="https://mihaezhov.github.io/tomorrow/img/MetaImage.png">
 </head>
 <body>
@@ -52,19 +52,19 @@
         </a>
 
         <div class="pattern-detail__preview">
-          <img src="../../img/p01.png" alt="Саджесты — пример паттерна">
+          <img src="../../img/p05.png" alt="Навигация — пример паттерна">
         </div>
 
         <div class="pattern-detail__meta">
-          <h1 class="article-detail__title">Саджесты</h1>
-          <p class="pattern-detail__description">Подсказывают, что можно сделать дальше</p>
+          <h1 class="article-detail__title">Навигация</h1>
+          <p class="pattern-detail__description">Перемещение внутри сценария</p>
           <span class="article-detail__tag">Паттерн</span>
         </div>
       </div>
 
       <article class="article-detail__content">
         <h2>Что это</h2>
-        <p>Саджесты — это подсказки следующего действия, которые система предлагает пользователю проактивно. Они появляются после ответа ИИ, в пустом инпуте или в момент паузы и помогают двигаться вперёд без необходимости формулировать запрос с нуля.</p>
+        <p>Навигация в ИИ-продукте — это способ, которым пользователь ориентируется внутри сессии или между режимами работы. В отличие от классических продуктов, где навигация строится вокруг структуры страниц, в ИИ-интерфейсах она часто организована вокруг истории диалога, режимов или задач.</p>
 
         <h2>Когда использовать</h2>
         <div class="pattern-checklist">
@@ -72,42 +72,42 @@
             <div class="pattern-checklist__icon">
               <img src="../../img/check-icon.svg" alt="check">
             </div>
-            <p class="pattern-checklist__text">После завершения ответа, когда пользователь может не знать, что спросить дальше.</p>
+            <p class="pattern-checklist__text">В продуктах с несколькими режимами работы — чат, поиск, редактор.</p>
           </div>
           <div class="pattern-checklist__item pattern-checklist__item--check">
             <div class="pattern-checklist__icon">
               <img src="../../img/check-icon.svg" alt="check">
             </div>
-            <p class="pattern-checklist__text">В пустом состоянии чата или поля ввода — чтобы снизить барьер первого шага.</p>
+            <p class="pattern-checklist__text">При длинных диалогах, где нужно вернуться к более раннему сообщению.</p>
           </div>
           <div class="pattern-checklist__item pattern-checklist__item--check">
             <div class="pattern-checklist__icon">
               <img src="../../img/check-icon.svg" alt="check">
             </div>
-            <p class="pattern-checklist__text">При онбординге — чтобы показать, что умеет система.</p>
+            <p class="pattern-checklist__text">В многошаговых сценариях, где пользователь может захотеть откатиться назад.</p>
           </div>
           <div class="pattern-checklist__item pattern-checklist__item--check">
             <div class="pattern-checklist__icon">
               <img src="../../img/check-icon.svg" alt="check">
             </div>
-            <p class="pattern-checklist__text">В сложных задачах, где возможны несколько путей продолжения.</p>
+            <p class="pattern-checklist__text">При переключении между несколькими задачами или чатами.</p>
           </div>
         </div>
 
         <h2>Как работает</h2>
-        <p>Система анализирует контекст текущего взаимодействия и генерирует 2–4 варианта следующего шага. Каждый вариант — короткая формулировка действия или вопроса, которую пользователь может принять одним кликом или адаптировать под себя.</p>
+        <p>Навигация в ИИ-продуктах строится на нескольких уровнях. Глобальная — переключение между разделами или режимами приложения. Локальная — перемещение внутри текущей сессии: скролл к началу, переход к конкретному сообщению. Контекстная — действия с конкретным ответом: скопировать, продолжить отсюда, разветвить диалог.</p>
 
-        <p>Ключевое требование: саджесты должны быть конкретными и релевантными, а не общими. «Расскажи подробнее» — слабый саджест. «Покажи пример на Python» или «Объясни проще» — сильные.</p>
+        <p>Каждый уровень должен быть доступен, но не мешать основному взаимодействию.</p>
 
         <div class="pattern-screens">
           <div class="pattern-screens__phone">
-            <img src="../../img/screen-12.png" alt="Пример экрана 1">
+            <img src="../../img/screen-10.png" alt="Пример экрана 1">
           </div>
           <div class="pattern-screens__phone">
-            <img src="../../img/screen-14.png" alt="Пример экрана 2">
+            <img src="../../img/screen-11.png" alt="Пример экрана 2">
           </div>
           <div class="pattern-screens__phone">
-            <img src="../../img/screen-15.png" alt="Пример экрана 3">
+            <img src="../../img/screen-12.png" alt="Пример экрана 3">
           </div>
         </div>
 
@@ -117,25 +117,25 @@
             <div class="pattern-checklist__icon">
               <img src="../../img/charm_cross.svg" alt="cross">
             </div>
-            <p class="pattern-checklist__text">Слишком много вариантов — 4 и более создают паралич выбора.</p>
+            <p class="pattern-checklist__text">Сложная иерархия меню там, где достаточно простых кнопок.</p>
           </div>
           <div class="pattern-checklist__item pattern-checklist__item--cross">
             <div class="pattern-checklist__icon">
               <img src="../../img/charm_cross.svg" alt="cross">
             </div>
-            <p class="pattern-checklist__text">Нерелевантные подсказки, не связанные с текущим контекстом.</p>
+            <p class="pattern-checklist__text">Навигация, которая прерывает диалог или теряет его контекст.</p>
           </div>
           <div class="pattern-checklist__item pattern-checklist__item--cross">
             <div class="pattern-checklist__icon">
               <img src="../../img/charm_cross.svg" alt="cross">
             </div>
-            <p class="pattern-checklist__text">Саджесты, которые дублируют друг друга по смыслу.</p>
+            <p class="pattern-checklist__text">Отсутствие истории — пользователь не может вернуться к прошлым сессиям.</p>
           </div>
           <div class="pattern-checklist__item pattern-checklist__item--cross">
             <div class="pattern-checklist__icon">
               <img src="../../img/charm_cross.svg" alt="cross">
             </div>
-            <p class="pattern-checklist__text">Принудительный выбор — пользователь всегда должен иметь возможность написать сам.</p>
+            <p class="pattern-checklist__text">Навязчивые элементы навигации, которые занимают место и отвлекают от контента.</p>
           </div>
         </div>
       </article>
@@ -144,6 +144,16 @@
         <h2 class="article-detail__related-title">Другие паттерны</h2>
 
         <div class="pattern-detail__related-grid">
+          <a href="pattern-1.html" class="pattern-detail__related-card">
+            <div class="pattern-detail__related-card-image">
+              <img src="../../img/p01.png" alt="Саджесты">
+            </div>
+            <div>
+              <h3 class="pattern-detail__related-card-title">Саджесты</h3>
+              <p class="pattern-detail__related-card-subtitle">Подсказывают, что можно сделать дальше</p>
+            </div>
+          </a>
+
           <a href="pattern-2.html" class="pattern-detail__related-card">
             <div class="pattern-detail__related-card-image">
               <img src="../../img/p02.png" alt="Инпут и ввод данных">
@@ -151,16 +161,6 @@
             <div>
               <h3 class="pattern-detail__related-card-title">Инпут и ввод данных</h3>
               <p class="pattern-detail__related-card-subtitle">Удобный и контролируемый ввод запроса</p>
-            </div>
-          </a>
-
-          <a href="pattern-3.html" class="pattern-detail__related-card">
-            <div class="pattern-detail__related-card-image">
-              <img src="../../img/p03.png" alt="Маркдаун разметка">
-            </div>
-            <div>
-              <h3 class="pattern-detail__related-card-title">Маркдаун разметка</h3>
-              <p class="pattern-detail__related-card-subtitle">Делает ответы ИИ читаемыми</p>
             </div>
           </a>
 
@@ -174,13 +174,13 @@
             </div>
           </a>
 
-          <a href="pattern-5.html" class="pattern-detail__related-card">
+          <a href="pattern-6.html" class="pattern-detail__related-card">
             <div class="pattern-detail__related-card-image">
-              <img src="../../img/p05.png" alt="Навигация">
+              <img src="../../img/p06.png" alt="Проактивные элементы">
             </div>
             <div>
-              <h3 class="pattern-detail__related-card-title">Навигация</h3>
-              <p class="pattern-detail__related-card-subtitle">Перемещение внутри сценария</p>
+              <h3 class="pattern-detail__related-card-title">Проактивные элементы</h3>
+              <p class="pattern-detail__related-card-subtitle">Действия ИИ без прямого запроса</p>
             </div>
           </a>
         </div>

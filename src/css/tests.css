@@ -1,0 +1,121 @@
+.tests-page {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  min-height: 100vh;
+  background-color: var(--background-primary);
+}
+
+.tests-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.tests-header-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tests-back-btn-wrapper {
+  display: flex;
+}
+
+.tests-title {
+  font: var(--title-l);
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.03em;
+}
+
+.tests-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.test-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surfaces-secondary);
+  border-radius: var(--corners-m);
+  border: 1px solid var(--stroke-primary);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+  overflow: hidden;
+}
+
+a.test-card:hover {
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.test-card--locked {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.test-card__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 40px;
+  flex: 1;
+}
+
+.test-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.test-card__tag {
+  font: var(--body-m);
+  color: var(--text-primary-inverse);
+  background-color: var(--background-brand-1);
+  padding: 4px 12px;
+  border-radius: var(--corners-rounded);
+  letter-spacing: -0.03em;
+}
+
+.test-card__count {
+  font: var(--body-m);
+  color: var(--text-secondary);
+  letter-spacing: -0.03em;
+}
+
+.test-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.test-card__title {
+  font: var(--title-m);
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.test-card__desc {
+  font: var(--body-l);
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.52;
+  letter-spacing: -0.03em;
+}
+
+.test-card__footer {
+  display: flex;
+}
+
+.test-card__soon {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
