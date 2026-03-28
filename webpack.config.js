@@ -101,6 +101,11 @@ module.exports = (env, argv) => {
         chunks: ['main'],
       }),
       new HtmlWebpackPlugin({
+        template: './src/content/articles/article-2.html',
+        filename: 'content/articles/article-2.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
         template: './src/quiz.html',
         filename: 'quiz.html',
         chunks: ['main'],
