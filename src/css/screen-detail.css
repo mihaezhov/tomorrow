@@ -130,6 +130,10 @@
   gap: 20px;
 }
 
+.screen-detail__observations .pattern-checklist__text {
+  font: var(--body-m);
+}
+
 .screen-detail__patterns-title {
   font: var(--body-l);
   color: var(--text-primary);
@@ -165,13 +169,13 @@
 /* Грид скринов */
 .screen-detail__grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   width: 100%;
 }
 
 .screen-detail__screen-card {
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 9 / 19;
   border-radius: 20px;
   overflow: hidden;
   background-color: var(--surfaces-secondary);

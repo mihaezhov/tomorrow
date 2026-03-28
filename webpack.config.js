@@ -227,6 +227,7 @@ module.exports = (env, argv) => {
         patterns: [
           { from: 'src/favicon.svg', to: 'favicon.svg' },
           { from: 'src/video', to: 'video' },
+          { from: 'src/img', to: 'img' },
         ],
       }),
     ],
