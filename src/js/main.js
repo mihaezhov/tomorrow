@@ -18,6 +18,7 @@ import '../css/screen-detail.css';
 import '../css/tabbar.css';
 import '../css/quiz.css';
 import '../css/tests.css';
+import '../css/responsive.css';
 
 import './articles'
 

@@ -1,0 +1,370 @@
+/* ==========================================================================
+   Адаптив. Подключается последним, поэтому переопределяет десктопные правила.
+   Брейкпоинты: 1024px (планшет/узкий десктоп), 768px (мобайл), 480px (узкий мобайл)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .features-container,
+  .tabs-container,
+  .plus-container,
+  .hero-content,
+  .footer__inner-container,
+  .patterns-container,
+  .articles-container,
+  .screens-container,
+  .styleguide-container,
+  .screen-detail-container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Главная: секции в колонку */
+  .features-container {
+    flex-direction: column;
+    gap: 48px;
+    padding: 0 40px;
+  }
+
+  .features-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .tabs-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+    padding: 0 40px;
+  }
+
+  .tabs-preview {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .plus-container {
+    padding: 0 40px;
+  }
+
+  .plus-cards {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .plus-card-image {
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .hero-content {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Header */
+  .header-sticky-wrapper {
+    top: 12px;
+    padding: 0 12px;
+  }
+
+  .header {
+    width: 100%;
+    gap: 12px;
+    padding: 10px 10px 10px 16px;
+  }
+
+  .header__logo {
+    width: 110px;
+    height: auto;
+  }
+
+  .header__action {
+    gap: 6px;
+  }
+
+  .header .btn {
+    padding: 9px 14px;
+    font-size: 0.9rem;
+  }
+
+  /* Типографика крупных заголовков */
+  .hero-title,
+  .features-title,
+  .plus-title,
+  .footer-title,
+  .tests-title,
+  .patterns-title,
+  .articles-title,
+  .screens-title,
+  .styleguide-title,
+  .article-detail__title,
+  .article-detail__related-title,
+  .screen-detail__title,
+  .quiz-intro__title {
+    font-size: 2.25rem;
+    line-height: 1.1;
+  }
+
+  .tab-item {
+    font-size: 2rem;
+  }
+
+  /* Hero */
+  .hero-section {
+    height: auto;
+    min-height: 640px;
+    padding: 140px 16px 56px;
+  }
+
+  .hero-content {
+    gap: 40px;
+    padding: 0;
+  }
+
+  /* Большой превью-скрин в hero — приглушаем, чтобы не лез на текст */
+  .hero-section > div[style] {
+    top: 96px !important;
+    width: 120% !important;
+    height: auto !important;
+    opacity: 0.4;
+  }
+
+  .hero-overlay {
+    height: 80%;
+  }
+
+  .hero-logos-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 28px;
+  }
+
+  /* Секции главной */
+  .section-features,
+  .section-tabs,
+  .section-plus {
+    padding: 64px 0;
+  }
+
+  .features-container,
+  .tabs-container,
+  .plus-container {
+    padding: 0 16px;
+  }
+
+  .features-content {
+    gap: 32px;
+  }
+
+  .feature-item {
+    align-items: flex-start;
+  }
+
+  .feature-text,
+  .tabs-label,
+  .plus-label {
+    font-size: 1rem;
+  }
+
+  .section-footer-cta {
+    height: auto;
+    min-height: 560px;
+    padding: 0 16px 24px;
+  }
+
+  .footer-content {
+    margin-bottom: 64px;
+    gap: 20px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 40px 0;
+  }
+
+  .footer__inner-container {
+    flex-direction: column;
+    gap: 36px;
+    padding: 0 16px;
+  }
+
+  .footer__links-container {
+    gap: 48px;
+  }
+
+  /* Каталоги: статьи / паттерны / скрины */
+  .patterns-page,
+  .articles-page,
+  .screens-page,
+  .styleguide-page {
+    padding-top: 120px;
+  }
+
+  .patterns-container,
+  .articles-container,
+  .screens-container,
+  .styleguide-container {
+    padding: 0 16px;
+    gap: 40px;
+    margin-bottom: 64px;
+  }
+
+  .articles-grid,
+  .patterns-grid,
+  .screens-grid {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 36px;
+    column-gap: 0;
+  }
+
+  /* Карточки на всю ширину */
+  .card,
+  .card--article,
+  .card--pattern,
+  .card--screen {
+    width: 100%;
+  }
+
+  .card--article .card__image-container,
+  .card--pattern .card__image-container {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .card--screen {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+
+  .card--screen .card__image-wrapper {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: auto;
+    aspect-ratio: 357 / 792;
+    top: 96px;
+  }
+
+  /* Tabbar */
+  .tabbar {
+    flex-wrap: wrap;
+  }
+
+  /* Tests */
+  .tests-page {
+    padding-top: 120px;
+    padding-bottom: 64px;
+  }
+
+  .tests-container {
+    padding: 0 16px;
+    gap: 40px;
+  }
+
+  .tests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .test-card__inner {
+    padding: 28px;
+    gap: 24px;
+  }
+
+  /* Article / pattern detail */
+  .article-detail-page,
+  .pattern-detail-page,
+  .screen-detail-page {
+    padding-top: 120px;
+    padding-bottom: 64px;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+  .article-detail-container,
+  .pattern-detail-container {
+    gap: 40px;
+  }
+
+  .article-detail__hero-image,
+  .article-detail__content-image,
+  .article-detail__card-image {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .article-detail__related {
+    gap: 36px;
+  }
+
+  /* Screen detail */
+  .screen-detail-container {
+    gap: 40px;
+  }
+
+  .screen-detail__info-row {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .screen-detail__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Pattern detail */
+  .pattern-detail__related-grid {
+    flex-direction: column;
+  }
+
+  .pattern-screens {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+
+  .pattern-screens__phone {
+    width: 220px;
+    height: 476px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title,
+  .features-title,
+  .plus-title,
+  .footer-title,
+  .tests-title,
+  .patterns-title,
+  .articles-title,
+  .screens-title,
+  .article-detail__title,
+  .quiz-intro__title {
+    font-size: 1.9rem;
+  }
+
+  .tab-item {
+    font-size: 1.7rem;
+  }
+
+  .header__action .btn:first-child {
+    display: none;
+  }
+
+  .screen-detail__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .screen-detail__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}

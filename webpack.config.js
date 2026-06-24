@@ -171,6 +171,56 @@ module.exports = (env, argv) => {
         chunks: ['main'],
       }),
       new HtmlWebpackPlugin({
+        template: './src/content/articles/article-16.html',
+        filename: 'content/articles/article-16.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-17.html',
+        filename: 'content/articles/article-17.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-18.html',
+        filename: 'content/articles/article-18.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-19.html',
+        filename: 'content/articles/article-19.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-20.html',
+        filename: 'content/articles/article-20.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-21.html',
+        filename: 'content/articles/article-21.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-22.html',
+        filename: 'content/articles/article-22.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-23.html',
+        filename: 'content/articles/article-23.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-24.html',
+        filename: 'content/articles/article-24.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/content/articles/article-25.html',
+        filename: 'content/articles/article-25.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
         template: './src/content/screens/screen-1.html',
         filename: 'content/screens/screen-1.html',
         chunks: ['main'],
@@ -208,6 +258,11 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         template: './src/quiz.html',
         filename: 'quiz.html',
+        chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/quiz-swipe.html',
+        filename: 'quiz-swipe.html',
         chunks: ['main'],
       }),
       new HtmlWebpackPlugin({
